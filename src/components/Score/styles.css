@@ -1,0 +1,31 @@
+/*    Score     */
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 9rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background: var(--white);
+}
+
+/*    Score title    */
+.score__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--score-text);
+}
+
+/*    Score value    */
+.score__value {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+@media (min-width: 600px) {
+  .score {
+    width: 12rem;
+  }
+}
