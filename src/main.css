@@ -1,0 +1,38 @@
+/* barlow-semi-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/barlow-semi-condensed-v15-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* barlow-semi-condensed-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/barlow-semi-condensed-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --scissors-gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+  --paper-gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+  --rock-gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+  --radial-gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+  --dark-text: hsl(229, 25%, 31%);
+  --score-text: hsl(229, 64%, 46%);
+  --header-outline: hsl(217, 16%, 45%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
