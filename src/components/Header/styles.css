@@ -12,15 +12,16 @@
 
 /*      Header title container     */
 .header__title_box {
-  max-width: 9rem;
+  max-width: 11rem;
 }
 
 /*      Header title     */
 .header__title {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 600;
   text-transform: uppercase;
   word-break: break-word;
+  line-height: 2.4rem;
   color: var(--white);
 }
 
@@ -30,6 +31,7 @@
   }
 
   .header__title {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    line-height: 2.8rem;
   }
 }
