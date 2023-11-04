@@ -1,9 +1,11 @@
+import OptionsContainer from "../OptionsContainer";
 import Rules from "../Rules";
 import "./styles.css";
 
 function Main() {
   return (
-    <main>
+    <main className="main">
+      <OptionsContainer />
       <Rules />
     </main>
   );

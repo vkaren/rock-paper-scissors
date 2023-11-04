@@ -1,0 +1,12 @@
+.options-container {
+  display: grid;
+  justify-items: center;
+  align-self: center;
+  grid-row-gap: 4rem;
+  width: fit-content;
+  margin: 0 auto;
+  background: url("/src/assets/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}

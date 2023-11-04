@@ -29,7 +29,7 @@
   right: 0;
   z-index: 20;
   margin: auto;
-  padding: 3rem;
+  padding: 3rem 0;
   background: var(--white);
 }
 
@@ -72,6 +72,10 @@
 }
 
 @media (min-width: 600px) {
+  .rules_btn {
+    align-self: flex-end;
+  }
+
   .modal {
     width: fit-content;
     height: fit-content;
