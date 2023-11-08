@@ -19,6 +19,25 @@
   border-width: 4px;
 }
 
+/*      Picked option      */
+.option.picked {
+  width: 13rem;
+  height: 13rem;
+}
+.option.picked .option__icon {
+  width: 9.5rem;
+  height: 9.5rem;
+}
+.option.picked:active,
+.option.picked:active .option__icon {
+  border-width: 6px;
+}
+
+/*      Picked option from house     */
+.option.picked.show {
+  animation: showOption 0.5s ease-in-out;
+}
+
 /*      Option icon container     */
 .option__icon {
   width: 8.5rem;
@@ -28,8 +47,7 @@
 }
 
 /*      Paper option       */
-.option.paper {
-  margin-right: 7rem;
+.option#paper {
   border-color: var(--paper-border);
   background: linear-gradient(var(--paper-gradient));
   grid-column: 1/2;
@@ -37,7 +55,7 @@
 }
 
 /*      Scissors option       */
-.option.scissors {
+.option#scissors {
   border-color: var(--scissors-border);
   background: linear-gradient(var(--scissors-gradient));
   grid-column: 2/3;
@@ -45,11 +63,20 @@
 }
 
 /*      Rock option       */
-.option.rock {
+.option#rock {
   border-color: var(--rock-border);
   background: linear-gradient(var(--rock-gradient));
   grid-column: 1/3;
   grid-row: 2/3;
+}
+
+@keyframes showOption {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (min-width: 600px) {
@@ -61,5 +88,14 @@
   .option__icon {
     width: 11.5rem;
     height: 11.5rem;
+  }
+
+  .option.picked {
+    width: 18rem;
+    height: 18rem;
+  }
+  .option.picked .option__icon {
+    width: 13.5rem;
+    height: 13.5rem;
   }
 }

@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
   align-self: center;
-  grid-row-gap: 4rem;
+  grid-gap: 4rem 7rem;
   width: fit-content;
   margin: 0 auto;
   background: url("/src/assets/bg-triangle.svg");

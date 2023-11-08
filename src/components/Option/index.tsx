@@ -1,10 +1,35 @@
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../context/app";
 import "./styles.css";
 
-function Option(params: { iconUrl: string; type: string }) {
+interface OptionInterface {
+  iconUrl: string;
+  type: string;
+  showAnimation?: boolean;
+}
+
+function Option({ iconUrl, type, showAnimation }: OptionInterface) {
+  const context = useContext(AppContext);
+  const [icon, setIcon] = useState("");
+
+  useEffect(() => {
+    const url = `../../assets/${iconUrl}`;
+
+    import(url).then((i) => {
+      setIcon(i?.default);
+    });
+  }, []);
+
   return (
-    <button className={`option ${params.type}`}>
+    <button
+      onClick={context!.onClickOption}
+      id={type}
+      className={`option ${showAnimation && "show"} ${
+        context!.userPicked && "picked"
+      }`}
+      disabled={!!context!.userPicked}>
       <div className="option__icon">
-        <img src={params.iconUrl} alt="option" />
+        {icon && <img src={icon} alt="option" />}
       </div>
     </button>
   );
