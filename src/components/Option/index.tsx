@@ -2,9 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/app";
 import "./styles.css";
 
+type Options = "paper" | "scissors" | "rock";
+
 interface OptionInterface {
   iconUrl: string;
-  type: string;
+  type: Options;
   showAnimation?: boolean;
 }
 
@@ -15,7 +17,10 @@ function Option({ iconUrl, type, showAnimation }: OptionInterface) {
   useEffect(() => {
     const url = `../../assets/${iconUrl}`;
 
-    import(url).then((i) => {
+    import(
+      /* @vite-ignore */
+      url
+    ).then((i) => {
       setIcon(i?.default);
     });
   }, []);

@@ -1,7 +1,9 @@
 /*      Picked options container     */
 .picked-options {
-  display: flex;
+  display: grid;
+  align-items: center;
   justify-content: space-around;
+  grid-row-gap: 6rem;
   width: 90%;
   max-width: 55rem;
   margin-top: auto;

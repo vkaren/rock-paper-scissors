@@ -32,6 +32,10 @@
   --rules-outline: hsl(227, 17%, 63%);
   --white: hsl(0, 0%, 95%);
   --blue: hsl(223, 48%, 16%);
+  --green: hsl(120, 64%, 52%);
+  --red: hsl(0, 64%, 52%);
+  --gray: hsl(0, 0%, 45%);
+  --transparent-blue: hsla(214, 47%, 23%, 0.418);
   --overlay: hsla(0, 0%, 0%, 0.149);
 }
 
@@ -50,9 +54,16 @@ body {
   min-height: 100vh;
   padding: 2rem 0;
   background: radial-gradient(var(--radial-gradient));
+  overflow-x: hidden;
 }
 
 button {
   font-family: "Barlow Semi Condensed", sans-serif;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  body {
+    overflow: hidden;
+  }
 }
