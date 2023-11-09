@@ -18,9 +18,9 @@ function PickedOption({ type }: PickedOptionInterface) {
     : context!.userPicked;
 
   const iconsUrls = {
-    paper: "icon-paper.svg",
-    scissors: "icon-scissors.svg",
-    rock: "icon-rock.svg",
+    paper: "icon-paper",
+    scissors: "icon-scissors",
+    rock: "icon-rock",
   };
   const iconUrl = iconsUrls[pickedOption as keyof typeof iconsUrls];
 
@@ -36,11 +36,13 @@ function PickedOption({ type }: PickedOptionInterface) {
         {isHouseOptionType ? "The house picked" : "You picked"}
       </h3>
       <div className="picked-option__container">
-        <Option
-          iconUrl={iconUrl}
-          type={pickedOption !== null && pickedOption}
-          showAnimation={isHouseOptionType}
-        />
+        {pickedOption !== null && (
+          <Option
+            iconUrl={iconUrl}
+            type={pickedOption}
+            showAnimation={isHouseOptionType}
+          />
+        )}
         <div className="picked-option__winner_b1">
           <div className="picked-option__winner_b2">
             <div className="picked-option__winner_b3"></div>

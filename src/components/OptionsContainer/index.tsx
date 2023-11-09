@@ -4,9 +4,9 @@ import "./styles.css";
 function OptionsContainer() {
   return (
     <section className="options-container">
-      <Option iconUrl={"icon-paper.svg"} type="paper" />
-      <Option iconUrl={"icon-scissors.svg"} type="scissors" />
-      <Option iconUrl={"icon-rock.svg"} type="rock" />
+      <Option iconUrl={"icon-paper"} type="paper" />
+      <Option iconUrl={"icon-scissors"} type="scissors" />
+      <Option iconUrl={"icon-rock"} type="rock" />
     </section>
   );
 }

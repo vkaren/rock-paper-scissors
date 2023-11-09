@@ -15,12 +15,7 @@ function Option({ iconUrl, type, showAnimation }: OptionInterface) {
   const [icon, setIcon] = useState("");
 
   useEffect(() => {
-    const url = `../../assets/${iconUrl}`;
-
-    import(
-      /* @vite-ignore */
-      url
-    ).then((i) => {
+    import(`../../assets/${iconUrl}.svg`).then((i) => {
       setIcon(i?.default);
     });
   }, []);
