@@ -31,7 +31,8 @@ function PickedOption({ type }: PickedOptionInterface) {
         ((isHouseOptionType && context!.hasUserWon === "lose") ||
           (!isHouseOptionType && context!.hasUserWon === "win")) &&
         "winner"
-      } `}>
+      } `}
+    >
       <h3 className="picked-option__title">
         {isHouseOptionType ? "The house picked" : "You picked"}
       </h3>

@@ -54,16 +54,16 @@ body {
   min-height: 100vh;
   padding: 2rem 0;
   background: radial-gradient(var(--radial-gradient));
-  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 button {
   font-family: "Barlow Semi Condensed", sans-serif;
   cursor: pointer;
-}
-
-@media (min-width: 600px) {
-  body {
-    overflow: hidden;
-  }
 }

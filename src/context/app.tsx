@@ -31,7 +31,7 @@ function AppProvider({ children }: AppProviderInterface) {
   const [score, setScore] = useState(0);
 
   useEffect(() => {
-    setScore(getScore());
+    getScore();
   }, []);
 
   useEffect(() => {
@@ -102,7 +102,8 @@ function AppProvider({ children }: AppProviderInterface) {
   };
 
   const getScore = () => {
-    return JSON.parse(localStorage.getItem("score") || "0");
+    const score = JSON.parse(localStorage.getItem("score") || "0");
+    setScore(score);
   };
 
   const playAgain: MouseEventHandler<HTMLButtonElement> = () => {
@@ -120,7 +121,8 @@ function AppProvider({ children }: AppProviderInterface) {
         score,
         onClickOption,
         playAgain,
-      }}>
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
